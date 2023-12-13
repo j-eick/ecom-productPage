@@ -1,5 +1,6 @@
-import styles from "./PageContainer.module.scss";
+import { ReactNode } from "react";
+import styles from "./Index.module.scss";
 
-export default function PageContainer() {
-  return <div className={styles.pageContainer}>PageContainer</div>;
+export default function PageContainer({ children }: { children: ReactNode }) {
+  return <div className={styles.index}>{children}</div>;
 }
