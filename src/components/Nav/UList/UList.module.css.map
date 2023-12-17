@@ -1,1 +1,1 @@
-{"version":3,"sources":["UList.module.scss","UList.module.css"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,aAAA;ACCF","file":"UList.module.css"}
+{"version":3,"sources":["UList.module.scss","UList.module.css","../../../styles/breakpoints/breakpoints.scss"],"names":[],"mappings":"AAEA;EACE,aAAA;ACDF;ACOE;EFPF;IAII,aAAA;ECAF;AACF","file":"UList.module.css"}

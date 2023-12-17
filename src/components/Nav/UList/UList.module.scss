@@ -1,4 +1,9 @@
+@import "../../../styles/breakpoints/breakpoints.scss";
+
 .ul {
-  width: 100%;
   display: flex;
+
+  @include mobile {
+    display: none;
+  }
 }

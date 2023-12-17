@@ -1,4 +1,8 @@
 .ul {
-  width: 100%;
   display: flex;
+}
+@media (min-width: 375px) {
+  .ul {
+    display: none;
+  }
 }/*# sourceMappingURL=UList.module.css.map */
