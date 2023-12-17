@@ -1,9 +1,12 @@
-.header {
-  height: 120px;
+@import "../../styles/breakpoints/breakpoints.scss";
 
+.header {
   display: grid;
   place-items: center;
   border-bottom: 1.5px solid rgba(83, 83, 83, 0.2);
 
-  background-color: burlywood;
+  @include mobile {
+    height: 70px;
+    background-color: burlywood;
+  }
 }
