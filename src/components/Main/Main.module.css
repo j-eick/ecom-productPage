@@ -1,5 +1,9 @@
 .container {
   height: 100%;
-  width: 80%;
-  background-color: yellow;
+}
+@media (min-width: 375px) {
+  .container {
+    width: 375px;
+    background-color: yellow;
+  }
 }/*# sourceMappingURL=Main.module.css.map */

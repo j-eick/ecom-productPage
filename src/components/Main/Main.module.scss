@@ -1,5 +1,10 @@
+@import "../../styles/breakpoints/breakpoints.scss";
+
 .container {
   height: 100%;
-  width: 80%;
-  background-color: yellow;
+
+  @include mobile {
+    width: 375px;
+    background-color: yellow;
+  }
 }
