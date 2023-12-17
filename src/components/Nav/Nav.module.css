@@ -1,1 +1,9 @@
-/*# sourceMappingURL=Nav.module.css.map */
+.nav {
+  display: flex;
+  place-items: center;
+}
+@media (min-width: 375px) {
+  .nav {
+    width: 87%;
+  }
+}/*# sourceMappingURL=Nav.module.css.map */

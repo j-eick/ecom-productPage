@@ -1,2 +1,10 @@
+@import "../../styles/breakpoints/breakpoints.scss";
+
 .nav {
+  display: flex;
+  place-items: center;
+
+  @include mobile {
+    width: 87%;
+  }
 }
