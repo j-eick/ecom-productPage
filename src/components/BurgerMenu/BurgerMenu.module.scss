@@ -1,0 +1,9 @@
+@import "../../styles/breakpoints/breakpoints.scss";
+
+.burgerMenu {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}
