@@ -1,0 +1,10 @@
+.burgerMenu {
+  display: none;
+}
+@media (min-width: 375px) {
+  .burgerMenu {
+    display: flex;
+    height: 15px;
+    margin-right: 15px;
+  }
+}/*# sourceMappingURL=BurgerMenu.module.css.map */

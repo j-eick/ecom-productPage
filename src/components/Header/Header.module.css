@@ -1,0 +1,11 @@
+.header {
+  display: grid;
+  place-items: center;
+  border-bottom: 1.5px solid rgba(83, 83, 83, 0.2);
+}
+@media (min-width: 375px) {
+  .header {
+    height: 70px;
+    background-color: burlywood;
+  }
+}/*# sourceMappingURL=Header.module.css.map */

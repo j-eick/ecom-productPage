@@ -1,0 +1,19 @@
+@import "../../styles/breakpoints/breakpoints.scss";
+
+.container {
+  // height: 100%;
+  position: relative;
+
+  @include mobile {
+    width: 375px;
+    background-color: yellow;
+  }
+  // @include md {
+  //   width: 100%;
+  //   background-color: lightgreen;
+  // }
+  @include wide {
+    width: 100%;
+    background-color: violet;
+  }
+}
