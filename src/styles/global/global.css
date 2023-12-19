@@ -16,6 +16,7 @@
   --fontSize_nav: var(--font_standard);
   --fontSize_button: var(--font_standard);
   --fontSize_price: 22px;
+  --fontWeight_sideMenu: 700;
 }
 
 body {
@@ -26,4 +27,4 @@ body {
 
 li {
   list-style: none;
-} /*# sourceMappingURL=global.css.map */
+}/*# sourceMappingURL=global.css.map */
