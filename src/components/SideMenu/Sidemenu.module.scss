@@ -1,0 +1,38 @@
+@import "../../styles/breakpoints/breakpoints.scss";
+
+.container {
+  @keyframes slide-in {
+    0% {
+      width: 0%;
+    }
+    70% {
+      width: 45%;
+    }
+    100% {
+      width: 40%;
+    }
+  }
+  @keyframes slide-out {
+    0% {
+      width: 40%;
+    }
+    70% {
+      width: 45%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+
+  @include mobile {
+    height: 100%;
+    width: 70%;
+    background-color: rgb(197, 98, 177);
+  }
+  &.closed {
+    animation: slide-out 1s ease-in-out forwards;
+  }
+  &.open {
+    animation: slide-in 1s ease-in-out forwards;
+  }
+}
