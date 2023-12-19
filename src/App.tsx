@@ -10,23 +10,28 @@ import useWindowResize from "./hooks/useWindowResize";
 import SideMenu from "./components/SideMenu/SideMenu";
 import { useState } from "react";
 import { SVGstorage } from "./util/SVGstorage";
+import styles from "./components/SideMenu/Sidemenu.module.scss";
 
 // console.clear();
 
 function App() {
-  const [isSidemenuOpen, setIsSidemenuOpen] = useState<boolean>(Boolean);
+  const [isSidemenuOpen, setIsSidemenuOpen] = useState<boolean>(false);
   const { width } = useWindowResize();
   let burgerMenu,
     navCategories = null;
 
-  const burgermenuHandler = () => {
-    setIsSidemenuOpen(!isSidemenuOpen);
-  };
+  console.log(isSidemenuOpen);
 
   if (width >= 375 && width <= 1439) {
-    burgerMenu = <BurgerMenu onClick={burgermenuHandler} />;
+    burgerMenu = (
+      <BurgerMenu
+        onClick={() => {
+          setIsSidemenuOpen(!isSidemenuOpen);
+        }}
+      />
+    );
   }
-  if (width >= 1440) {
+  if (width >= 375 && width <= 1439) {
     navCategories = (
       <UList>
         {navElements.map((navItem) => (
@@ -39,17 +44,35 @@ function App() {
   return (
     <PageContainer>
       <Main>
-        {/* <SideMenu isSideMenuOpen={isSidemenuOpen}> */}
-        {/* <SVGstorage
-            variant="backArrow_empty"
-            size="24px"
+        <SideMenu isSideMenuOpen={isSidemenuOpen}>
+          <SVGstorage
+            className={styles.back_icon}
+            variant="cancel"
+            size="32px"
             color="#111418"
+            viewBox="0 0 470 1000"
             onClick={() => setIsSidemenuOpen(!isSidemenuOpen)}
-          /> */}
-        {navCategories}
-        {/* </SideMenu> */}
+          />
+
+          {navCategories}
+        </SideMenu>
         <Header>
-          <Nav>{burgerMenu}</Nav>
+          <Nav>
+            {burgerMenu}
+            <img
+              src="/images/logo.svg"
+              alt="logo"
+              width={130}
+              style={{ marginRight: "95px" }}
+            />
+            <img
+              src="/images/icon-cart.svg"
+              alt="cart_icon"
+              width={20}
+              style={{ marginRight: "15px" }}
+            />
+            <img src="/images/image-avatar.png" alt="logo" width={25} />
+          </Nav>
         </Header>
         <div className="product">
           <div className="company">company</div>
