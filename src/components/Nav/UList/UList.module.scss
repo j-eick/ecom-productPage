@@ -6,4 +6,7 @@
   @include mobile {
     display: none;
   }
+  @include wide {
+    display: block;
+  }
 }

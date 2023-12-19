@@ -5,4 +5,9 @@
   .ul {
     display: none;
   }
+}
+@media (min-width: 1440px) {
+  .ul {
+    display: block;
+  }
 }/*# sourceMappingURL=UList.module.css.map */
