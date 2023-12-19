@@ -1,4 +1,4 @@
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, SVGProps } from "react";
 
 type svgObjectProps = {
   [variant: string]: string;
@@ -8,7 +8,9 @@ type svgStorageProps = {
   size: string;
   color: string;
   fillRule?: "evenodd" | undefined;
+  viewBox?: string | undefined;
   onClick?: MouseEventHandler<SVGSVGElement>;
+  className: SVGProps<SVGSVGElement>["className"];
 };
 
 const svgObject: svgObjectProps = {
@@ -36,6 +38,8 @@ const svgObject: svgObjectProps = {
     "M8 0a8 8 0 100 16A8 8 0 008 0zm3.5 7.5a.5.5 0 010 1H5.707l2.147 2.146a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 11.708.708L5.707 7.5H11.5z",
   backArrow_empty:
     "M1 8a7 7 0 1014 0A7 7 0 001 8zm15 0A8 8 0 110 8a8 8 0 0116 0zm-4.5-.5a.5.5 0 010 1H5.707l2.147 2.146a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 11.708.708L5.707 7.5H11.5z",
+  cancel:
+    "M452 656c12 12 18 26.333 18 43s-6 31-18 43c-12 10.667-26.333 16-43 16s-31-5.333-43-16L234 590 102 742c-12 10.667-26.333 16-43 16s-31-5.333-43-16C5.333 730 0 715.667 0 699s5.333-31 16-43l138-156L16 342C5.333 330 0 315.667 0 299s5.333-31 16-43c12-10.667 26.333-16 43-16s31 5.333 43 16l132 152 132-152c12-10.667 26.333-16 43-16s31 5.333 43 16c12 12 18 26.333 18 43s-6 31-18 43L314 500l138 156",
 };
 
 export const SVGstorage = ({
@@ -44,12 +48,15 @@ export const SVGstorage = ({
   color = "currentColor",
   fillRule = undefined,
   onClick,
+  className,
+  viewBox = "0 0 24 24",
 }: svgStorageProps) => {
   return (
     <svg
       style={{ width: size, height: size }}
-      viewBox="0 0 24 24"
+      viewBox={viewBox}
       onClick={onClick}
+      className={className}
     >
       <path
         fill={color}
