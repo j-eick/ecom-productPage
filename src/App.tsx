@@ -7,29 +7,27 @@ import ListItem from "./components/Nav/ListItem/ListItem";
 import navElements from "../src/util/nav.json";
 import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
 import useWindowResize from "./hooks/useWindowResize";
-// import useCheckMediaQuery from "./hooks/useCheckMediaQuery";
+import SideMenu from "./components/SideMenu/SideMenu";
+import { useState } from "react";
+import { SVGstorage } from "./util/SVGstorage";
 
-console.clear();
+// console.clear();
 
 function App() {
+  const [isSidemenuOpen, setIsSidemenuOpen] = useState<boolean>(Boolean);
   const { width } = useWindowResize();
-  let mobileHeader;
-  let xxlScreen;
+  let burgerMenu,
+    navCategories = null;
 
-  console.log(width);
-
-  const burgerHandler = () => {
-    console.log("hello");
+  const burgermenuHandler = () => {
+    setIsSidemenuOpen(!isSidemenuOpen);
   };
 
   if (width >= 375 && width <= 1439) {
-    mobileHeader = <BurgerMenu onClick={burgerHandler} />;
-  } else {
-    return null;
+    burgerMenu = <BurgerMenu onClick={burgermenuHandler} />;
   }
-
   if (width >= 1440) {
-    xxlScreen = (
+    navCategories = (
       <UList>
         {navElements.map((navItem) => (
           <ListItem key={navItem.category}>{navItem.category}</ListItem>
@@ -41,11 +39,17 @@ function App() {
   return (
     <PageContainer>
       <Main>
+        {/* <SideMenu isSideMenuOpen={isSidemenuOpen}> */}
+        {/* <SVGstorage
+            variant="backArrow_empty"
+            size="24px"
+            color="#111418"
+            onClick={() => setIsSidemenuOpen(!isSidemenuOpen)}
+          /> */}
+        {navCategories}
+        {/* </SideMenu> */}
         <Header>
-          <Nav>
-            {mobileHeader}
-            {xxlScreen}
-          </Nav>
+          <Nav>{burgerMenu}</Nav>
         </Header>
         <div className="product">
           <div className="company">company</div>
