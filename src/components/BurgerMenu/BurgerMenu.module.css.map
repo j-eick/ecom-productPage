@@ -1,1 +1,1 @@
-{"version":3,"sources":["BurgerMenu.module.scss","BurgerMenu.module.css","../../styles/breakpoints/breakpoints.scss"],"names":[],"mappings":"AAEA;EACE,aAAA;ACDF;ACOE;EFPF;IAII,cAAA;ECAF;AACF","file":"BurgerMenu.module.css"}
+{"version":3,"sources":["BurgerMenu.module.scss","BurgerMenu.module.css","../../styles/breakpoints/breakpoints.scss"],"names":[],"mappings":"AAEA;EACE,aAAA;ACDF;ACOE;EFPF;IAII,aAAA;IACA,YAAA;IAEA,kBAAA;ECDF;AACF","file":"BurgerMenu.module.css"}
