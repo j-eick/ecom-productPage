@@ -7,27 +7,16 @@ console.clear();
 type sideMenuProps = HTMLAttributes<HTMLDivElement> & {
   children: ReactNode;
   isSideMenuOpen: boolean;
-  onClick?: () => void;
 };
 
-export default function Sidemenu({
-  children,
-  isSideMenuOpen,
-  onClick,
-}: sideMenuProps) {
+export default function Sidemenu({ children, isSideMenuOpen }: sideMenuProps) {
   const containerClasses = classNames(styles.container, {
-    [styles.closed]: !isSideMenuOpen,
+    [styles.close]: !isSideMenuOpen,
     [styles.open]: isSideMenuOpen,
   });
 
-  console.log(isSideMenuOpen);
-
   return (
-    <div
-      className={containerClasses}
-      data-sidemenu={isSideMenuOpen}
-      onClick={onClick}
-    >
+    <div className={containerClasses} data-sidemenu={isSideMenuOpen}>
       {children}
     </div>
   );
