@@ -1,2 +1,13 @@
+@import "../../../styles/breakpoints/breakpoints.scss";
+
 .listItem {
+  @include mobile {
+    &.close {
+    }
+  }
+  @include wide {
+    &.close {
+      opacity: 0;
+    }
+  }
 }
