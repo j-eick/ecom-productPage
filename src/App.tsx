@@ -11,6 +11,7 @@ import SideMenu from "./components/SideMenu/SideMenu";
 import { useState } from "react";
 import { SVGstorage } from "./util/SVGstorage";
 import styles from "./components/SideMenu/Sidemenu.module.scss";
+import HeaderDesktop from "./components/HeaderDesktop/HeaderDesktop";
 
 // console.clear();
 
@@ -18,7 +19,8 @@ function App() {
   const [isSidemenuOpen, setIsSidemenuOpen] = useState<boolean>(false);
   const { width } = useWindowResize();
   let burgerMenu,
-    navCategories = null;
+    navCategories_mobile,
+    navCategories_desktop = null;
 
   console.log(isSidemenuOpen);
 
@@ -31,11 +33,27 @@ function App() {
       />
     );
   }
+
+  // ##### Mobile Nav #####
   if (width >= 375 && width <= 1439) {
-    navCategories = (
+    navCategories_mobile = (
       <UList>
         {navElements.map((navItem) => (
-          <ListItem key={navItem.category}>{navItem.category}</ListItem>
+          <ListItem isSideMenuOpen={isSidemenuOpen} key={navItem.category}>
+            {navItem.category}
+          </ListItem>
+        ))}
+      </UList>
+    );
+  }
+  // ##### Desktop Nav #####
+  if (width >= 1440) {
+    navCategories_desktop = (
+      <UList>
+        {navElements.map((navItem) => (
+          <ListItem isSideMenuOpen={isSidemenuOpen} key={navItem.category}>
+            {navItem.category}
+          </ListItem>
         ))}
       </UList>
     );
@@ -54,8 +72,13 @@ function App() {
             onClick={() => setIsSidemenuOpen(!isSidemenuOpen)}
           />
 
-          {navCategories}
+          {navCategories_mobile}
         </SideMenu>
+
+        {/* 
+          //  put mobile + desktop header-components into <header>
+          //  media queries will do the rest
+        */}
         <Header>
           <Nav>
             {burgerMenu}
@@ -74,6 +97,9 @@ function App() {
             <img src="/images/image-avatar.png" alt="logo" width={25} />
           </Nav>
         </Header>
+        <HeaderDesktop>{navCategories_desktop}</HeaderDesktop>
+
+        {/*     ##### Side-Content #####     */}
         <div className="product">
           <div className="company">company</div>
           <div className="product-title">product-title</div>
