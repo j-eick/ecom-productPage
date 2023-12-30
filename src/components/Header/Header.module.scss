@@ -9,4 +9,9 @@
     height: 70px;
     background-color: burlywood;
   }
+
+  @include wide {
+    height: 140px;
+    background-color: burlywood;
+  }
 }

@@ -8,4 +8,10 @@
     height: 70px;
     background-color: burlywood;
   }
+}
+@media (min-width: 1440px) {
+  .header {
+    height: 140px;
+    background-color: burlywood;
+  }
 }/*# sourceMappingURL=Header.module.css.map */
