@@ -32,11 +32,6 @@ body {
   min-width: 375px;
   height: 100%;
   background-color: green;
-
-  @include mobile {
-    display: grid;
-    place-items: center;
-  }
 }
 
 li {
