@@ -11,44 +11,21 @@ import SideMenu from "./components/SideMenu/SideMenu";
 import { useState } from "react";
 import { SVGstorage } from "./util/SVGstorage";
 import styles from "./components/SideMenu/Sidemenu.module.scss";
-import HeaderDesktop from "./components/HeaderDesktop/HeaderDesktop";
+import Image from "./components/Image/Image";
+// import HeaderDesktop from "./components/HeaderDesktop/HeaderDesktop";
 
 // console.clear();
 
 function App() {
   const [isSidemenuOpen, setIsSidemenuOpen] = useState<boolean>(false);
   const { width } = useWindowResize();
-  let burgerMenu,
-    navCategories_mobile,
-    navCategories_desktop = null;
+  let navCategories_mobile = null;
 
   console.log(isSidemenuOpen);
-
-  if (width >= 375 && width <= 1439) {
-    burgerMenu = (
-      <BurgerMenu
-        onClick={() => {
-          setIsSidemenuOpen(!isSidemenuOpen);
-        }}
-      />
-    );
-  }
 
   // ##### Mobile Nav #####
   if (width >= 375 && width <= 1439) {
     navCategories_mobile = (
-      <UList>
-        {navElements.map((navItem) => (
-          <ListItem isSideMenuOpen={isSidemenuOpen} key={navItem.category}>
-            {navItem.category}
-          </ListItem>
-        ))}
-      </UList>
-    );
-  }
-  // ##### Desktop Nav #####
-  if (width >= 1440) {
-    navCategories_desktop = (
       <UList>
         {navElements.map((navItem) => (
           <ListItem isSideMenuOpen={isSidemenuOpen} key={navItem.category}>
@@ -81,23 +58,16 @@ function App() {
         */}
         <Header>
           <Nav>
-            {burgerMenu}
-            <img
-              src="/images/logo.svg"
-              alt="logo"
-              width={130}
-              style={{ marginRight: "95px" }}
+            <BurgerMenu
+              onClick={() => {
+                setIsSidemenuOpen(!isSidemenuOpen);
+              }}
             />
-            <img
-              src="/images/icon-cart.svg"
-              alt="cart_icon"
-              width={20}
-              style={{ marginRight: "15px" }}
-            />
-            <img src="/images/image-avatar.png" alt="logo" width={25} />
+            <Image variant="logo" src="/images/logo.svg" alt="logo" />
+            <Image variant="cart" src="/images/icon-cart.svg" alt="cart_icon" />
+            <Image variant="avatar" src="/images/image-avatar.png" alt="logo" />
           </Nav>
         </Header>
-        <HeaderDesktop>{navCategories_desktop}</HeaderDesktop>
 
         {/*     ##### Side-Content #####     */}
         <div className="product">
