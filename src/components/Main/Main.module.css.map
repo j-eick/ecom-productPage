@@ -1,1 +1,1 @@
-{"version":3,"sources":["Main.module.scss","Main.module.css","../../styles/breakpoints/breakpoints.scss"],"names":[],"mappings":"AAEA;EAEE,kBAAA;ACFF;ACOE;EFPF;IAKI,YAAA;IACA,wBAAA;ECDF;AACF;ACQE;EFdF;IAaI,WAAA;IACA,wBAAA;ECHF;AACF","file":"Main.module.css"}
+{"version":3,"sources":["Main.module.scss","Main.module.css","../../styles/breakpoints/breakpoints.scss"],"names":[],"mappings":"AAEA;EAEE,kBAAA;ACFF;ACOE;EFPF;IAKI,YAAA;IACA,iBAAA;IACA,wBAAA;ECDF;AACF;ACOE;EFdF;IAWI,UAAA;IACA,gBAAA;IACA,wBAAA;ECAF;AACF","file":"Main.module.css"}

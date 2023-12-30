@@ -1,15 +1,17 @@
-.container {
+.main {
   position: relative;
 }
 @media (min-width: 375px) {
-  .container {
+  .main {
     width: 375px;
+    min-height: 667px;
     background-color: yellow;
   }
 }
 @media (min-width: 1440px) {
-  .container {
-    width: 100%;
+  .main {
+    width: 75%;
+    min-height: 100%;
     background-color: violet;
   }
 }/*# sourceMappingURL=Main.module.css.map */
