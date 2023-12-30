@@ -1,0 +1,40 @@
+.logo {
+  width: 130px;
+}
+@media (min-width: 375px) {
+  .logo {
+    width: 150px;
+    grid-column: span 4;
+  }
+}
+@media (min-width: 1440px) {
+  .logo {
+    width: 200px;
+    grid-column: span 3;
+  }
+}
+
+@media (min-width: 375px) {
+  .cart {
+    grid-column: 12;
+  }
+}
+@media (min-width: 1440px) {
+  .cart {
+    width: 40px;
+    grid-column: 18;
+  }
+}
+
+@media (min-width: 375px) {
+  .avatar {
+    width: 25px;
+    grid-column: 15;
+  }
+}
+@media (min-width: 1440px) {
+  .avatar {
+    width: 70px;
+    grid-column: 20;
+  }
+}/*# sourceMappingURL=Image.module.css.map */

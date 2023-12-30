@@ -1,0 +1,35 @@
+@import "../../styles/breakpoints/breakpoints.scss";
+
+.logo {
+  width: 130px;
+
+  @include mobile {
+    width: 150px;
+    grid-column: span 4;
+  }
+  @include wide {
+    width: 200px;
+    grid-column: span 3;
+  }
+}
+
+.cart {
+  @include mobile {
+    grid-column: 12;
+  }
+  @include wide {
+    width: 40px;
+    grid-column: 18;
+  }
+}
+
+.avatar {
+  @include mobile {
+    width: 25px;
+    grid-column: 15;
+  }
+  @include wide {
+    width: 70px;
+    grid-column: 20;
+  }
+}
