@@ -7,8 +7,23 @@
 }
 
 .index {
-  height: 100vh;
   width: 100%;
-  display: flex;
-  justify-content: center;
+}
+@media (min-width: 375px) {
+  .index {
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(243, 243, 243);
+  }
+}
+@media (min-width: 1440px) {
+  .index {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(243, 243, 243);
+  }
 }/*# sourceMappingURL=Index.module.css.map */
