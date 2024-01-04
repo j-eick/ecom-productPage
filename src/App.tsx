@@ -6,57 +6,44 @@ import UList from "./components/Nav/UList/UList";
 import ListItem from "./components/Nav/ListItem/ListItem";
 import navElements from "../src/util/nav.json";
 import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
-import useWindowResize from "./hooks/useWindowResize";
 import SideMenu from "./components/SideMenu/SideMenu";
 import { useState } from "react";
 import { SVGstorage } from "./util/SVGstorage";
 import styles from "./components/SideMenu/Sidemenu.module.scss";
 import Image from "./components/Image/Image";
-// import HeaderDesktop from "./components/HeaderDesktop/HeaderDesktop";
 
-// console.clear();
+console.clear();
 
 function App() {
   const [isSidemenuOpen, setIsSidemenuOpen] = useState<boolean>(false);
-  const { width } = useWindowResize();
-  let navCategories_mobile = null;
 
   console.log(isSidemenuOpen);
-
-  // ##### Mobile Nav #####
-  if (width >= 375 && width <= 1439) {
-    navCategories_mobile = (
-      <UList>
-        {navElements.map((navItem) => (
-          <ListItem isSideMenuOpen={isSidemenuOpen} key={navItem.category}>
-            {navItem.category}
-          </ListItem>
-        ))}
-      </UList>
-    );
-  }
 
   return (
     <PageContainer>
       <Main>
-        <SideMenu isSideMenuOpen={isSidemenuOpen}>
-          <SVGstorage
-            className={styles.back_icon}
-            variant="cancel"
-            size="32px"
-            color="#111418"
-            viewBox="0 0 470 1000"
-            onClick={() => setIsSidemenuOpen(!isSidemenuOpen)}
-          />
-
-          {navCategories_mobile}
-        </SideMenu>
-
-        {/* 
-          //  put mobile + desktop header-components into <header>
-          //  media queries will do the rest
-        */}
         <Header>
+          <SideMenu isSideMenuOpen={isSidemenuOpen}>
+            <SVGstorage
+              className={styles.back_icon}
+              variant="cancel"
+              size="32px"
+              color="#111418"
+              viewBox="0 0 470 1000"
+              onClick={() => setIsSidemenuOpen(!isSidemenuOpen)}
+            />
+
+            <UList>
+              {navElements.map((navItem) => (
+                <ListItem
+                  isSideMenuOpen={isSidemenuOpen}
+                  key={navItem.category}
+                >
+                  {navItem.category}
+                </ListItem>
+              ))}
+            </UList>
+          </SideMenu>
           <Nav>
             <BurgerMenu
               onClick={() => {
