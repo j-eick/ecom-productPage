@@ -6,14 +6,13 @@ import UList from "./components/Nav/UList/UList";
 import ListItem from "./components/Nav/ListItem/ListItem";
 import navElements from "../src/util/nav.json";
 import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
-import useWindowResize from "./hooks/useWindowResize";
 import SideMenu from "./components/SideMenu/SideMenu";
 import { useState } from "react";
 import { SVGstorage } from "./util/SVGstorage";
 import styles from "./components/SideMenu/Sidemenu.module.scss";
 import Image from "./components/Image/Image";
 import Caroussel from "./components/Caroussel/Caroussel";
-// import HeaderDesktop from "./components/HeaderDesktop/HeaderDesktop";
+import ProductContainer from "./components/ProductContainer/ProductContainer";
 
 // console.clear();
 
@@ -56,30 +55,35 @@ function App() {
             <Image variant="avatar" src="/images/image-avatar.png" alt="logo" />
           </Nav>
         </Header>
-
-        {/*     ##### Side-Content #####     */}
-        <Caroussel />
-        <div className="product">
-          <div className="company">company</div>
-          <div className="product-title">product-title</div>
-          <div className="product-photo">product-photo</div>
-          <div className="product-desciption">product-details</div>
-          <div className="product-price">product-price: 125 USD</div>
-          <div>
-            <ul>
-              <li>
-                <button>-</button>
-              </li>
-              <li>
-                <span>(number)</span>
-              </li>
-              <li>
-                <button>+</button>
-              </li>
-            </ul>
-            <button>Add to cart</button>
-          </div>
-        </div>
+        <ProductContainer>
+          <section className="leftSide">
+            <Caroussel />
+            <div className="preview"></div>
+          </section>
+          <section className="rightSide">
+            <div className="product">
+              <div className="company">company</div>
+              <div className="product-title">product-title</div>
+              <div className="product-photo">product-photo</div>
+              <div className="product-desciption">product-details</div>
+              <div className="product-price">product-price: 125 USD</div>
+              <div>
+                <ul>
+                  <li>
+                    <button>-</button>
+                  </li>
+                  <li>
+                    <span>(number)</span>
+                  </li>
+                  <li>
+                    <button>+</button>
+                  </li>
+                </ul>
+                <button>Add to cart</button>
+              </div>
+            </div>
+          </section>
+        </ProductContainer>
       </Main>
     </PageContainer>
   );
