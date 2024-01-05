@@ -5,13 +5,14 @@
   .main {
     width: 375px;
     min-height: 767px;
-    background-color: yellow;
+    background-color: rgb(255, 255, 255);
   }
 }
 @media (min-width: 1440px) {
   .main {
     width: clamp(1280px, 75%, 1440px);
     min-height: 100%;
-    background-color: violet;
+    border: 3px solid black;
+    background-color: rgb(255, 255, 255);
   }
 }/*# sourceMappingURL=Main.module.css.map */
