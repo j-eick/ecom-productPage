@@ -12,6 +12,7 @@ import { useState } from "react";
 import { SVGstorage } from "./util/SVGstorage";
 import styles from "./components/SideMenu/Sidemenu.module.scss";
 import Image from "./components/Image/Image";
+import Caroussel from "./components/Caroussel/Caroussel";
 // import HeaderDesktop from "./components/HeaderDesktop/HeaderDesktop";
 
 // console.clear();
@@ -57,6 +58,7 @@ function App() {
         </Header>
 
         {/*     ##### Side-Content #####     */}
+        <Caroussel />
         <div className="product">
           <div className="company">company</div>
           <div className="product-title">product-title</div>

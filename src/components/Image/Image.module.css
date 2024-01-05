@@ -37,4 +37,23 @@
     width: 70px;
     grid-column: 20;
   }
+}
+
+@media (min-width: 375px) {
+  .photo_caroussel {
+    position: relative;
+    width: 100%;
+    display: flex;
+    border: 3px solid red;
+    z-index: 10;
+  }
+  .photo_caroussel::before {
+    position: absolute;
+    z-index: 99;
+    content: "hello";
+    width: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 110px;
+  }
 }/*# sourceMappingURL=Image.module.css.map */

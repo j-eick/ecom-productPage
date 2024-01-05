@@ -44,7 +44,7 @@
   .container.open {
     width: 260px;
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateX(-5px);
   }
   .container.open .back_icon {
     display: block;

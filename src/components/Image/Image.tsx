@@ -14,6 +14,7 @@ export default function Logo({ src, alt, width, variant }: imgProps) {
     [styles.logo]: variant === "logo",
     [styles.cart]: variant === "cart",
     [styles.avatar]: variant === "avatar",
+    [styles.photo_caroussel]: variant === "photo_caroussel",
     [styles.default]: !variant,
   });
 
