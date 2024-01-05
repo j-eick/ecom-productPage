@@ -11,7 +11,7 @@ import { useState } from "react";
 import { SVGstorage } from "./util/SVGstorage";
 import styles from "./components/SideMenu/Sidemenu.module.scss";
 import Image from "./components/Image/Image";
-import Caroussel from "./components/Caroussel/Caroussel";
+// import Caroussel from "./components/Caroussel/Caroussel";
 import ProductContainer from "./components/ProductContainer/ProductContainer";
 
 // console.clear();
@@ -55,35 +55,7 @@ function App() {
             <Image variant="avatar" src="/images/image-avatar.png" alt="logo" />
           </Nav>
         </Header>
-        <ProductContainer>
-          <section className="leftSide">
-            <Caroussel />
-            <div className="preview"></div>
-          </section>
-          <section className="rightSide">
-            <div className="product">
-              <div className="company">company</div>
-              <div className="product-title">product-title</div>
-              <div className="product-photo">product-photo</div>
-              <div className="product-desciption">product-details</div>
-              <div className="product-price">product-price: 125 USD</div>
-              <div>
-                <ul>
-                  <li>
-                    <button>-</button>
-                  </li>
-                  <li>
-                    <span>(number)</span>
-                  </li>
-                  <li>
-                    <button>+</button>
-                  </li>
-                </ul>
-                <button>Add to cart</button>
-              </div>
-            </div>
-          </section>
-        </ProductContainer>
+        <ProductContainer />
       </Main>
     </PageContainer>
   );

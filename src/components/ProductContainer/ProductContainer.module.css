@@ -1,1 +1,22 @@
-/*# sourceMappingURL=ProductContainer.module.css.map */
+@media (min-width: 1440px) {
+  .productContainer {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: white;
+  }
+}
+
+@media (min-width: 1440px) {
+  .leftSide {
+    width: 50%;
+    border: 3px solid blue;
+  }
+}
+
+@media (min-width: 1440px) {
+  .rightSide {
+    width: 50%;
+    border: 3px solid violet;
+  }
+}/*# sourceMappingURL=ProductContainer.module.css.map */
