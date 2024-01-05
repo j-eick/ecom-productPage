@@ -9,11 +9,5 @@ export default function Caroussel() {
         <span className={styles.next} />
       </div>
     </>
-
-    // <Image
-    //     variant="photo_caroussel"
-    //     src="/images/prodThumbnails/image-product-1-thumbnail.jpg"
-    //     alt="prod_photo"
-    //   />
   );
 }
