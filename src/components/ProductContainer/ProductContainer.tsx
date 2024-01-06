@@ -1,6 +1,7 @@
 import styles from "./ProductContainer.module.scss";
 import Caroussel from "../Caroussel/Caroussel";
 import Image from "../Image/Image";
+import ProdPreview from "../ProdPreview/ProdPreview";
 
 export default function ProductContainer() {
   return (
@@ -8,7 +9,7 @@ export default function ProductContainer() {
       {/* ######## LEFT SIDE ########## */}
       <section className={styles.leftSide}>
         <Caroussel />
-        <div className="preview">
+        <ProdPreview>
           <Image
             variant="prod_thumbnails"
             src="/images/prodThumbnails/image-product-1-thumbnail.jpg"
@@ -29,7 +30,7 @@ export default function ProductContainer() {
             src="/images/prodThumbnails/image-product-4-thumbnail.jpg"
             alt="prodPhoto_1"
           />
-        </div>
+        </ProdPreview>
       </section>
 
       {/* ######## RIGHT SIDE  ########## */}
