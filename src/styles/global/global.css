@@ -16,6 +16,13 @@
   --fontSize_nav: var(--font_standard);
   --fontSize_button: var(--font_standard);
   --fontSize_price: 22px;
+  --fontSize_company: 17px;
+  --fontColor_company: var(--orange);
+  --fontWeight_company: 700;
+  --fontSize_product-title: 40px;
+  --fontWeight_product-title: 700;
+  --fontSize_description: 16px;
+  --fontColor_description: var(--dark_grayish_blue);
   --fontWeight_sideMenu: 700;
 }
 
