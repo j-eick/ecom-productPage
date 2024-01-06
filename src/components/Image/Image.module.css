@@ -56,4 +56,12 @@
     transform: translateY(-50%);
     left: 110px;
   }
+}
+
+@media (min-width: 1440px) {
+  .prod_thumbnails {
+    flex-shrink: 1;
+    flex-grow: 1;
+    border-radius: 12%;
+  }
 }/*# sourceMappingURL=Image.module.css.map */

@@ -5,7 +5,6 @@ type imgProps = {
   src: string;
   alt: string;
   width?: number;
-  className?: string;
   variant?: string;
 };
 
@@ -15,6 +14,7 @@ export default function Logo({ src, alt, width, variant }: imgProps) {
     [styles.cart]: variant === "cart",
     [styles.avatar]: variant === "avatar",
     [styles.photo_caroussel]: variant === "photo_caroussel",
+    [styles.prod_thumbnails]: variant === "prod_thumbnails",
     [styles.default]: !variant,
   });
 

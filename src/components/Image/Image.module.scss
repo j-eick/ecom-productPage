@@ -53,3 +53,12 @@
     }
   }
 }
+
+.prod_thumbnails {
+  @include wide {
+    flex-shrink: 1;
+    flex-grow: 1;
+
+    border-radius: 12%;
+  }
+}
