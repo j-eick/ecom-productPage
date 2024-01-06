@@ -1,0 +1,19 @@
+.company {
+  margin-top: 60px;
+  font-size: var(--fontSize_company);
+  font-weight: var(--fontWeight_company);
+  color: var(--fontColor_company);
+}
+
+.title {
+  margin-top: 20px;
+  font-size: var(--fontSize_product-title);
+  font-weight: var(--fontWeight_product-title);
+}
+
+.desciption {
+  margin-top: 20px;
+  font-size: var(--fontSize_description);
+  color: var(--fontColor_description);
+  line-height: 1.6;
+}/*# sourceMappingURL=Product.module.css.map */
