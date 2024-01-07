@@ -54,12 +54,11 @@ export default function ProductContainer() {
           </div>
 
           {/* +++++  PRODUCT PRICE  +++++ */}
-          <div className={product.price}>
-            $ 125.00 <span className={product.discount}>50%</span>
-          </div>
-
-          {/* +++++  PRODUCT FORMER PRICE  +++++ */}
-          <div className={product.formerPrice}>$ 250.00</div>
+          <ul className={product.priceContainer}>
+            <li className={product.price}>$125.00</li>
+            <li className={product.discount}>50%</li>
+            <li className={product.formerPrice}>$250.00</li>
+          </ul>
 
           {/* +++++  PRODUCT CHECKOUT  +++++ */}
           <div className={product.checkout}>

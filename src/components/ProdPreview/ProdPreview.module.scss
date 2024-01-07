@@ -1,10 +1,15 @@
 @import "../../styles/breakpoints/breakpoints.scss";
 
 .prodPreview {
-  height: 130px;
-  width: 100%;
-  padding-top: 40px;
+  @include mobile {
+    display: none;
+  }
+  @include wide {
+    height: 130px;
+    width: 100%;
+    padding-top: 40px;
 
-  display: flex;
-  gap: 40px;
+    display: flex;
+    gap: 40px;
+  }
 }

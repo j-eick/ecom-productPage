@@ -6,12 +6,17 @@
     grid-template-columns: repeat(15, 1fr);
     background-image: url("../../../public/images/prodPictures/image-product-1.jpg");
     background-size: 100%;
-    border-radius: 20px;
   }
 }
 @media (min-width: 1440px) {
   .caroussel {
     height: 450px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(15, 1fr);
+    background-image: url("../../../public/images/prodPictures/image-product-1.jpg");
+    background-size: 100%;
+    border-radius: 20px;
   }
 }
 
