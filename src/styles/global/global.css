@@ -23,7 +23,19 @@
   --fontWeight_product-title: 700;
   --fontSize_description: 16px;
   --fontColor_description: var(--dark_grayish_blue);
+  --fontSize_price: 25px;
+  --fontWeight_price: var(--fontWeight_700);
+  --fontSize_discount: 15px;
+  --fontWeight_discount: var(--fontWeight_700);
+  --fontSize_formerPrice: 13px;
+  --fontWeight_formerPrice: var(--fontWeight_700);
+  --fontSize_counter: 13px;
+  --fontWeight_counter: var(--fontWeight_700);
+  --fontSize_cartButton: 13px;
+  --fontWeight_counter: var(--fontWeight_700);
   --fontWeight_sideMenu: 700;
+  --fontWeight_400: 400;
+  --fontWeight_700: 700;
 }
 
 body {
