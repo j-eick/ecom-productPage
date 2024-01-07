@@ -1,1 +1,1 @@
-{"version":3,"sources":["ProdPreview.module.scss","ProdPreview.module.css"],"names":[],"mappings":"AAEA;EACE,aAAA;EACA,WAAA;EACA,iBAAA;EAEA,aAAA;EACA,SAAA;ACFF","file":"ProdPreview.module.css"}
+{"version":3,"sources":["../../styles/breakpoints/breakpoints.scss","ProdPreview.module.scss","ProdPreview.module.css"],"names":[],"mappings":"AASE;ECPF;IAEI,aAAA;ECDF;AACF;AFYE;ECdF;IAKI,aAAA;IACA,WAAA;IACA,iBAAA;IAEA,aAAA;IACA,SAAA;ECAF;AACF","file":"ProdPreview.module.css"}

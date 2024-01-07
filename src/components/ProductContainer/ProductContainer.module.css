@@ -16,6 +16,11 @@
   }
 }
 
+@media (min-width: 375px) {
+  .rightSide {
+    padding: 0px 20px;
+  }
+}
 @media (min-width: 1440px) {
   .rightSide {
     width: 50%;

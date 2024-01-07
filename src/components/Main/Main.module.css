@@ -4,7 +4,8 @@
 @media (min-width: 375px) {
   .main {
     width: 375px;
-    min-height: 767px;
+    max-height: 840px;
+    overflow: scroll;
     background-color: rgb(255, 255, 255);
   }
 }

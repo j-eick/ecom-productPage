@@ -26,22 +26,27 @@
   --fontSize_price: 22px;
 
   // FONTS--PRODUCT
-  --fontSize_company: 17px;
-  --fontColor_company: var(--orange);
-  --fontWeight_company: 700;
+  --fontSize_company: 17px; // wide
+  --fontColor_company: var(--orange); // wide
+  --fontWeight_company: 700; // wide
+  --fontSize_company_mobile: 15px; // mobile
+  --fontColor_company_mobile: var(--orange); // mobile
+  --fontWeight_company_mobile: 700; // mobile
 
-  --fontSize_product-title: 40px;
-  --fontWeight_product-title: 700;
+  --fontSize_product-title: 40px; // wide
+  --fontWeight_product-title: 700; // wide
+  --fontSize_product-title_mobile: 27px; // mobile
+  --fontWeight_product-title_mobile: 700; // mobile
 
   --fontSize_description: 16px;
   --fontColor_description: var(--dark_grayish_blue);
 
-  --fontSize_price: 25px;
+  --fontSize_price: 28px;
   --fontWeight_price: var(--fontWeight_700);
-  --fontSize_discount: 15px;
+  --fontSize_discount: 16px;
   --fontWeight_discount: var(--fontWeight_700);
 
-  --fontSize_formerPrice: 13px;
+  --fontSize_formerPrice: 15px;
   --fontWeight_formerPrice: var(--fontWeight_700);
 
   --fontSize_counter: 13px;
