@@ -9,7 +9,7 @@ import Button from "../Button/Button";
 export default function ProductContainer() {
   return (
     <section className={styles.productContainer}>
-      {/* ######## IF DESKTOP... ########## */}
+      {/* ######## IF DESKTOP... ########### */}
       {/* ######## LEFT SIDE ########## */}
       <section className={styles.leftSide}>
         <Caroussel />
