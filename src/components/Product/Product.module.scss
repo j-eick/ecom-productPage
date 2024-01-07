@@ -1,8 +1,5 @@
 @import "../../styles/breakpoints/breakpoints.scss";
 
-.product {
-}
-
 .company {
   margin-top: 60px;
   font-size: var(--fontSize_company);
@@ -22,4 +19,59 @@
   font-size: var(--fontSize_description);
   color: var(--fontColor_description);
   line-height: 1.6;
+}
+
+.price {
+  margin-top: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  font-size: var(--fontSize_price);
+  font-weight: var(--fontWeight_price);
+
+  .discount {
+    padding: 2px 8px;
+    background-color: var(--pale_orange);
+
+    border-radius: 7px;
+    font-size: var(--fontSize_discount);
+    color: var(--orange);
+  }
+}
+
+.formerPrice {
+  padding-top: 10px;
+
+  font-size: var(--fontSize_formerPrice);
+  font-weight: var(--fontWeight_700);
+  color: var(--grayish_blue);
+
+  text-decoration: line-through;
+}
+
+.checkout {
+  margin-top: 25px;
+
+  display: flex;
+  gap: 15px;
+
+  .ulCounterContainer {
+    width: 130px;
+
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--light_grayish_blue);
+
+    border-radius: 7px;
+  }
+
+  .liCounter {
+    display: flex;
+    align-items: center;
+
+    font-size: var(--fontSize_counter);
+    font-weight: var(--fontWeight_counter);
+  }
 }
