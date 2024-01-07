@@ -4,10 +4,12 @@ import Image from "../Image/Image";
 import ProdPreview from "../ProdPreview/ProdPreview";
 import Product from "../Product/Product";
 import product from "../Product/Product.module.scss";
+import Button from "../Button/Button";
 
 export default function ProductContainer() {
   return (
     <section className={styles.productContainer}>
+      {/* ######## IF DESKTOP... ########## */}
       {/* ######## LEFT SIDE ########## */}
       <section className={styles.leftSide}>
         <Caroussel />
@@ -38,27 +40,55 @@ export default function ProductContainer() {
       {/* ######## RIGHT SIDE  ########## */}
       <section className={styles.rightSide}>
         <Product>
+          {/* +++++  COMPANY NAME  +++++ */}
           <div className={product.company}>SNEAKER COMPANY</div>
+
+          {/* +++++  PRODUCT TILE  +++++ */}
           <div className={product.title}>Fall Limited Edition Sneakers</div>
+
+          {/* +++++  PRODUCT DESCRIPTION  +++++ */}
           <div className={product.desciption}>
             These low-profile sneakers are your perfect casual wear companion.
             Featuring a durable rubber outer sole, they'll withstand everything
             the weather can offer.
           </div>
-          <div className="product-price">product-price: 125 USD</div>
-          <div>
-            <ul>
-              <li>
-                <button>-</button>
+
+          {/* +++++  PRODUCT PRICE  +++++ */}
+          <div className={product.price}>
+            $ 125.00 <span className={product.discount}>50%</span>
+          </div>
+
+          {/* +++++  PRODUCT FORMER PRICE  +++++ */}
+          <div className={product.formerPrice}>$ 250.00</div>
+
+          {/* +++++  PRODUCT CHECKOUT  +++++ */}
+          <div className={product.checkout}>
+            <ul className={product.ulCounterContainer}>
+              <li className={product.liLess}>
+                <Button
+                  variant="buttonCounterAmount"
+                  className={product.buttonCounterLess}
+                >
+                  <Image src="/images/icon-minus.svg" alt="button_less" />
+                </Button>
               </li>
-              <li>
-                <span>(number)</span>
+              <li className={product.liCounter}>
+                <span>0</span>
               </li>
-              <li>
-                <button>+</button>
+              <li className={product.liMore}>
+                <Button
+                  variant="buttonCounterAmount"
+                  className={product.buttonCounterMore}
+                >
+                  <Image src="/images/icon-plus.svg" alt="button_more" />
+                </Button>
               </li>
             </ul>
-            <button>Add to cart</button>
+            <Button variant="addToCart" iconSrc="/images/icon-cart.svg">
+              {/* <span icon="addToCartIcon" /> */}
+              <Image src="/images/icon-cart.svg" alt="cart_icon" width={16} />
+              Add to cart
+            </Button>
           </div>
         </Product>
       </section>
