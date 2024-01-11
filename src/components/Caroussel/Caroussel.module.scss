@@ -40,6 +40,8 @@
     background-color: white;
 
     &::before {
+      position: absolute;
+      z-index: 10;
       content: "";
       background-image: url("../../../public/images/icon-previous.svg");
       background-size: cover;
