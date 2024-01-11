@@ -10,7 +10,7 @@
 }
 @media (min-width: 1440px) {
   .caroussel {
-    height: 450px;
+    height: 400px;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(15, 1fr);
@@ -41,7 +41,6 @@
     width: 30px;
   }
 }
-
 @media (min-width: 375px) {
   .next {
     width: 45px;

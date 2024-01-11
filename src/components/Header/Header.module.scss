@@ -3,15 +3,16 @@
 .header {
   display: grid;
   place-items: center;
-  border-bottom: 1.5px solid rgba(83, 83, 83, 0.2);
 
   @include mobile {
     height: 70px;
-    background-color: burlywood;
+    border-bottom: none;
+    // background-color: burlywood;
   }
 
   @include wide {
-    height: 140px;
-    background-color: burlywood;
+    height: 110px;
+    border-bottom: 3px solid rgba(83, 83, 83, 0.1);
+    // background-color: burlywood;
   }
 }

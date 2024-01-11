@@ -103,6 +103,7 @@
   .priceContainer .formerPrice {
     grid-area: formerPrice;
     justify-self: start;
+    text-align: left;
   }
 }
 

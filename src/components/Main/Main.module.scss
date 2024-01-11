@@ -6,15 +6,18 @@
   @include mobile {
     width: 375px;
     max-height: 840px;
+
     overflow: scroll;
 
     background-color: rgb(255, 255, 255);
   }
 
   @include wide {
-    width: clamp(1280px, 75%, 1440px);
+    width: clamp(1024px, 75%, 1280px);
     min-height: 100%;
-    border: 3px solid black;
+    // border: 3px solid black;
+
+    overflow: hidden;
 
     background-color: rgb(255, 255, 255);
   }

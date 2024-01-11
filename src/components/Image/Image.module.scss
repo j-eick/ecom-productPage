@@ -8,7 +8,7 @@
     grid-column: span 4;
   }
   @include wide {
-    width: 200px;
+    width: 140px;
     grid-column: span 3;
   }
 }
@@ -18,8 +18,8 @@
     grid-column: 12;
   }
   @include wide {
-    width: 40px;
-    grid-column: 18;
+    width: 25px;
+    grid-column: 23;
   }
 }
 
@@ -29,8 +29,8 @@
     grid-column: 15;
   }
   @include wide {
-    width: 70px;
-    grid-column: 20;
+    width: 50px;
+    grid-column: 25;
   }
 }
 

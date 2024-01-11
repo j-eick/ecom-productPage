@@ -15,7 +15,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: pink;
   }
 }
 @media (min-width: 1440px) {
@@ -24,6 +23,5 @@
     width: 100vw;
     display: flex;
     justify-content: center;
-    background-color: pink;
   }
 }/*# sourceMappingURL=Index.module.css.map */

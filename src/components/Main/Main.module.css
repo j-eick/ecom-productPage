@@ -11,9 +11,9 @@
 }
 @media (min-width: 1440px) {
   .main {
-    width: clamp(1280px, 75%, 1440px);
+    width: clamp(1024px, 75%, 1280px);
     min-height: 100%;
-    border: 3px solid black;
+    overflow: hidden;
     background-color: rgb(255, 255, 255);
   }
 }/*# sourceMappingURL=Main.module.css.map */
