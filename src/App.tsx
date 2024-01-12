@@ -23,7 +23,7 @@ function App() {
 
   return (
     <PageContainer>
-      <Main>
+      <Main isSidemenuOpen={isSidemenuOpen}>
         <SideMenu isSideMenuOpen={isSidemenuOpen}>
           <SVGstorage
             className={styles.back_icon}

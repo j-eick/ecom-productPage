@@ -7,12 +7,10 @@
   @include mobile {
     height: 70px;
     border-bottom: none;
-    // background-color: burlywood;
   }
 
   @include wide {
     height: 110px;
     border-bottom: 3px solid rgba(83, 83, 83, 0.1);
-    // background-color: burlywood;
   }
 }
